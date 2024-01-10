@@ -8,8 +8,8 @@ mkdir -p ~/nf_atacseq_test_paired/raw_data
 Download the demo data:
 ```
 cd ~/nf_atacseq_test_paired/
-curl -J -O https://datashare.mpcdf.mpg.de/s/4FjdbpUjiCvCyBt/download
-
+curl -J -O https://datashare.mpcdf.mpg.de/s/ftg8K5610cIHGpR/download
+unzip bowtie2_output.zip 
 ```
 
 Change the parameters in params_paired.json accordingly, e.g. change "project_folder" : "/nexus/posix0/MAGE-flaski/service/hpc/home/wangy/nf_atacseq_test_paired/" to "project_folder" : Users/YOURNAME/nf_atacseq_test_paired/"
