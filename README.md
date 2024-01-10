@@ -1,4 +1,4 @@
-# nf-flexbar
+# nf-ATACseqQC
 
 Create the test directory:
 ```
