@@ -1,5 +1,5 @@
 { 
-  "project_folder" : "/raven/u/wangy/nf_atacseq_test_paired" ,
+  "project_folder" : "/nexus/posix0/MAGE-flaski/service/hpc/home/wangy/nf_atacseq_test_paired" ,
   "organism" : "homo_sapiens" ,
   "release" : "105" ,
   "seq" : "paired",

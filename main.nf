@@ -9,7 +9,7 @@ process get_images {
   script:
     """
 
-    if [[ "${params.run_type}" == "r2d2" ]] || [[ "${params.run_type}" == "raven" ]] ; 
+    if [[ "${params.run_type}" == "r2d2" ]] || [[ "${params.run_type}" == "raven" ]] || [[ "${params.run_type}" == "studio" ]]; 
       then
         cd ${params.image_folder}
         if [[ ! -f atacseqqc-1.26.0.sif ]] ;
@@ -33,7 +33,7 @@ process atacseqqc_R {
   stageOutMode 'move'
 
   when:
-    ( ! file("/workdir/tmp/ATACSeqQC.${sample}.Rdata").exists() ) 
+    ( ! file("${params.project_folder}/tmp/ATACSeqQC.${sample}.Rdata").exists() ) 
   input:
     val sample
   
