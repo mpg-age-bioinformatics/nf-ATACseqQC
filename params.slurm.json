@@ -1,0 +1,11 @@
+{ 
+  "project_folder" : "/raven/u/wangy/nf_atacseq_test_paired" ,
+  "organism" : "homo_sapiens" ,
+  "release" : "105" ,
+  "seq" : "paired",
+  "remove_mito" : "yes" ,
+  "TxDb" : "TxDb.Hsapiens.UCSC.hg38.knownGene",
+  "BSgenome" : "BSgenome.Hsapiens.UCSC.hg38",
+  "atac_genome" : "Hsapiens",
+  "chrom" : "1:24"
+}
