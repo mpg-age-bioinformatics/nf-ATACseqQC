@@ -54,8 +54,6 @@ if (!dir.exists('/workdir/tmp')) {
   dir.create('/workdir/tmp')
 }
 
-setwd("/workdir/ATACSeqQC_output/")
-
 # execute ATACSEQQC only if TxDb exists
 if("${params.TxDb}" != ""){
 library(${params.TxDb})
@@ -202,6 +200,7 @@ for(i in seqlev){
 }
 save.image("/workdir/tmp/ATACSeqQC.${sample}.Rdata")
 
+setwd("/workdir/ATACSeqQC_output/")
 tar("chromosome_heatmaps.${sample}.tar.gz", files = "chromosome_heatmaps.${sample}", compression = "gzip")
 
 sessionInfo()
