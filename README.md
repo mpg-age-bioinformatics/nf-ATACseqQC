@@ -7,8 +7,8 @@ mkdir -p ~/nf_atacseq_test_paired/raw_data
 
 Download the demo data:
 ```
-cd ~/nf_atacseq_test_paired/bowtie2_output
-curl -J -O 
+cd ~/nf_atacseq_test_paired/
+curl -J -O https://datashare.mpcdf.mpg.de/s/4FjdbpUjiCvCyBt/download
 
 ```
 
