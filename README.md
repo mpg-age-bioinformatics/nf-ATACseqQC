@@ -23,7 +23,6 @@ nextflow run nf-ATACseqQC -params-file ~/nf-ATACseqQC/params.slurm.json -entry i
 nextflow run nf-ATACseqQC -params-file ~/nf-ATACseqQC/params.slurm.json -profile ${PROFILE}
 ```
 
-```
 
 ## Contributing
 
