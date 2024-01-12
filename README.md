@@ -9,7 +9,8 @@ Download the demo data:
 ```
 cd ~/nf_atacseq_test_paired/
 curl -J -O https://datashare.mpcdf.mpg.de/s/ftg8K5610cIHGpR/download
-unzip bowtie2_output.zip 
+unzip bowtie2_output_paired.zip 
+mv  bowtie2_output_paired  bowtie2_output
 ```
 
 Change the parameters in params_paired.json accordingly, e.g. change "project_folder" : "/nexus/posix0/MAGE-flaski/service/hpc/home/wangy/nf_atacseq_test_paired/" to "project_folder" : Users/YOURNAME/nf_atacseq_test_paired/"
