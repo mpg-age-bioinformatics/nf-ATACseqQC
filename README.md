@@ -2,7 +2,7 @@
 
 Create the test directory:
 ```
-mkdir -p ~/nf_atacseq_test_paired/raw_data
+mkdir -p ~/nf_atacseq_test_paired
 ```
 
 Download the demo data:
@@ -15,13 +15,18 @@ mv  bowtie2_output_paired  bowtie2_output
 
 Change the parameters in params_paired.json accordingly, e.g. change "project_folder" : "/nexus/posix0/MAGE-flaski/service/hpc/home/wangy/nf_atacseq_test_paired/" to "project_folder" : Users/YOURNAME/nf_atacseq_test_paired/"
 
+Download the paramaters file:
+```
+cd ~/nf_atacseq_test_paired
+curl -J -O https://raw.githubusercontent.com/mpg-age-bioinformatics/nf-ATACseqQC/main/params.json
+```
 
 Run the workflow:
 
 ```
 PROFILE=studio
-nextflow run nf-ATACseqQC -params-file ~/nf-ATACseqQC/params.slurm.json -entry images -profile ${PROFILE}  && \
-nextflow run nf-ATACseqQC -params-file ~/nf-ATACseqQC/params.slurm.json -profile ${PROFILE}
+nextflow run nf-ATACseqQC -params-file ~/nf_atacseq_test_paired/params.slurm.json -entry images -profile ${PROFILE}  && \
+nextflow run nf-ATACseqQC -params-file ~/nf_atacseq_test_paired/params.slurm.json -profile ${PROFILE}
 ```
 
 
