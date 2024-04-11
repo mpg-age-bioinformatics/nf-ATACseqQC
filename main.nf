@@ -209,7 +209,20 @@ sessionInfo()
 }
 
 
+process upload_paths {
+  stageInMode 'symlink'
+  stageOutMode 'move'
 
+  script:
+  """
+    rm -rf upload.txt
+    cd ${params.project_folder}/ATACSeqQC_output
+    for f in \$(ls *.{xlsx,pdf,tar.gz}) ; do echo "ATACSeqQC_out \$(readlink -f \${f})" >>  upload.txt_ ; done
+    
+    uniq upload.txt_ upload.txt 
+    rm upload.txt_
+  """
+}
 
 workflow images {
   main:
@@ -229,3 +242,7 @@ workflow {
   }
 }
 
+workflow upload {
+  main:
+    upload_paths()
+}
