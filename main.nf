@@ -215,12 +215,14 @@ process upload_paths {
 
   script:
   """
-    rm -rf upload.txt
+  if [ -d ${params.project_folder}/ATACSeqQC_output ]; then  
     cd ${params.project_folder}/ATACSeqQC_output
+    rm -rf upload.txt
     for f in \$(ls *.{xlsx,pdf,tar.gz}) ; do echo "ATACSeqQC_out \$(readlink -f \${f})" >>  upload.txt_ ; done
     
     uniq upload.txt_ upload.txt 
     rm upload.txt_
+  fi
   """
 }
 
